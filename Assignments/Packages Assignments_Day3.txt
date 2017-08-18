@@ -1,0 +1,39 @@
+Classes and Constructors
+---------------------------
+
+1.Write a class Define a class to represent a bank account. Include the following members:
+a.Data Members:
+b.Name of the Depositor
+c.Account Number
+d.Type of Account
+e.Balance amount in the account	Data Methods:
+a.To assign initial values
+b.To deposit an amount
+c.To withdraw an amount 
+d.To display name and balance.
+
+2. Create a class called Student with the following details: RollNo, StudName, MarksInEng, MarksInMaths and MarksInScience. Display the total marks and Percentage of the student.
+
+3.Write a Menu driven application in java that demonstrate a use of Stack and Queue.
+(Hint : Use Different class for Stack and Queue)
+
+4.Create a class called Calculator which has 4 methods add, diff, mul and div.  Create  an application to access these methods.
+
+
+5.Create a class called car.  When the car object is created, it should be initialized with regno,ownername, company name. Write display function to display the details of the car.
+
+6.For the problem No.1, find out no. of accounts created.
+
+
+
+Packages
+-------------
+1.Write a program in java to show the difference between protected and default members of a class.  (within a package and across the package how it differs)
+
+2.A program in java to show that private members of a super class cannot be accessed from derived classes
+
+3. create package com.learn A, with class accessexample, use public int a, private int b, protected in c, int d. try accessing them in subclass, separate class with main method in it with object creation and non object creation.
+
+Repeat access procedure in package com.learnB
+
+
