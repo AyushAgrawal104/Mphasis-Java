@@ -1,0 +1,23 @@
+Day 2 Assignment
+------------------
+1. Create a class Employee and define folowing proprties type
+empid
+empname
+companyname
+salary
+
+1. define above mentoned properties in Employee class with suitable data types
+
+2. Follow naming and coding convensions
+
+3. define a method called setData(int,String,double)    and set data to the instance variables
+4. define a satic method displayEmployee(Employee emp) and print, company name, name of employee, emp id and salary
+
+5. Note: Never define main method in Employee class.
+   insted define a saparate class called "UseClass"    and create 5 diffrent employee class objects
+
+6. Display all employee objects by calling displayEmployee(Employee emp) method
+
+ 
+
+ 

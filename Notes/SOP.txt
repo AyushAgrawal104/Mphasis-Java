@@ -1,0 +1,10 @@
+1. System is a class in java.lang package.
+2. out is the static .reference obeject of type PrintStream class.
+3. PrintStream class belongs to a package java.io.
+4. println() belongs to PrintStream class]
+
+The combination of System.out gives you PrintStream class object.
+--> on top of PrintStream class object println() method is called
+
+
+

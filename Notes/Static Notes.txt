@@ -1,0 +1,12 @@
+1. Except properties declarations,initialization and object creations, all other things like condition testings, loops  you should define them in a method
+
+2. static methods allows you to access only static properties.
+
+3. static methods never allow you to access non static (insstance) properties directly.
+
+4.Non static methods lets you to access all(static and non static)
+
+
+
+
+
