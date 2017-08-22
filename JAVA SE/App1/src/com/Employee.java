@@ -5,6 +5,7 @@ public class Employee {
 	private int empId;
 	private String empName;
 	private double salary; // directly
+	
 
 	public int getEmpId() {
 		return empId;
