@@ -16,7 +16,44 @@ Method overridding visibility scopes
 2. When super class method is default, then sun class    overridden method can be default, public and protected
 3. When Super class method is protected, then sub class         overridden method can be protected and public
 4. When super class method is private, then  sub class cannot    have the visibility of private methods
+
+
+Constructore Overloading
+--------------------------
     
+--> Sub class object calls all super class default      constructors when you create object to sub class, if any    suprer class not having parametarized constructors if that is called explecitky by sub class default constructor( in this case super class default constructor wil not be called)
+
+--> When you provide parameterarized constructor in super    class, then you must privide defauult constructor also in super class when you are calling default constructor of sub class. 
+--> When you do not wish to provide a default constructor in the super class in this case, call parametarized constructor of super class from default constructor of sub class using super keyword
+
+
+--> When a super and sub classes having both default and parametarized constructors, if you are invoking sub class parametarized constrictor, then super class parametarized and sub class default constructor willl not be called.
+
+Abstact classes
+-------------------
+1. An abstract class is a method specifecation contaions zero or more abstract methods and concrete methods
+2. An abstract method do not specifies body. Its only    declaration.
+3. We cannot create an object to a abstract class. But we can create a reference variable to an abstract class
+4. The reference of abstract class can  store all its implementation class objects
+5. if any class implements abstract class, then that implementation class must override/implement all abstract methods of abstract class. 
+
+6. if any one of the abstract method is not implemented in sub class of an abstract class, then that sub class must be defined as 'abstract'
+
+
+  Extensibility
+
+
+Interfaces
+-----------------
+1. An  interface is a  method specifecation contains zero or more abstract methods.
+2. We cannot define concrete methods in interfaces
+3. by default all properties in interface is public final and static
+
+
+
+
+
+
 
 
 
