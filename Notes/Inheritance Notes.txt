@@ -1,0 +1,33 @@
+Notes
+--------
+
+1. A Super class reference varaible can store all its 
+   implementation class objects
+2. A sub class reference variable cannot store super class
+   object
+3. The  reference of the super class can be used to access 
+   all methods in the super class and common methods(a    methood which is avaiable both in super and sub class/    overridden methods)
+4. The reference of super class cannot be used to access    individual methods( a method which is not avaiable in    super class and avaible in sub class) of the sub class
+
+
+Method overridding visibility scopes
+-----------------------------------------
+1. When super class method is public, then sub class    overriden methods must be public
+2. When super class method is default, then sun class    overridden method can be default, public and protected
+3. When Super class method is protected, then sub class         overridden method can be protected and public
+4. When super class method is private, then  sub class cannot    have the visibility of private methods
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
