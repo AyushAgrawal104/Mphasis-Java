@@ -18,19 +18,24 @@ public class GCDemo {
 	public static void main(String[] args) {
 
 		System.out.println("-- Test");
+		
+		Xyz x=new Xyz();
+		x=null;
+		System.gc();
+		
 
-		   Runtime rt=Runtime.getRuntime();
+		 /*  Runtime rt=Runtime.getRuntime();
 		   System.out.println("-- Avaiable Space: "+rt.totalMemory());
 		 
-		   System.out.println("-- Free memory: "+rt.freeMemory());
+		   System.out.println("-- Free memory: "+rt.freeMemory());*/
 		
-		for (int i = 0; i <= 100000; i++) {
+		/*for (int i = 0; i <= 100000; i++) {
 			Xyz x = new Xyz();
 			
-		}
+		}*/
 		
 
-		  System.out.println("-- Free memory: "+rt.freeMemory());
+		//  System.out.println("-- Free memory: "+rt.freeMemory());
 	}
 
 }
