@@ -1,23 +1,5 @@
-/*
-Navicat Oracle Data Transfer
-Oracle Client Version : 10.2.0.5.0
-
-Source Server         : Oracle-TRAINING
-Source Server Version : 100200
-Source Host           : localhost:1521
-Source Schema         : TRAINING
-
-Target Server Type    : ORACLE
-Target Server Version : 100200
-File Encoding         : 65001
-
-Date: 2017-08-29 11:44:57
-*/
 
 
--- ----------------------------
--- Table structure for "TRAINING"."COUNTRIES"
--- ----------------------------
 DROP TABLE "TRAINING"."COUNTRIES";
 CREATE TABLE "TRAINING"."COUNTRIES" (
 "COUNTRY_ID" CHAR(2 BYTE) NOT NULL ,
@@ -33,9 +15,6 @@ COMMENT ON COLUMN "TRAINING"."COUNTRIES"."COUNTRY_ID" IS 'Primary key of countri
 COMMENT ON COLUMN "TRAINING"."COUNTRIES"."COUNTRY_NAME" IS 'Country name';
 COMMENT ON COLUMN "TRAINING"."COUNTRIES"."REGION_ID" IS 'Region ID for the country. Foreign key to region_id column in the departments table.';
 
--- ----------------------------
--- Records of COUNTRIES
--- ----------------------------
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('AR', 'Argentina', '2');
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('AU', 'Australia', '3');
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('BE', 'Belgium', '1');
@@ -62,9 +41,7 @@ INSERT INTO "TRAINING"."COUNTRIES" VALUES ('US', 'United States of America', '2'
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('ZM', 'Zambia', '4');
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('ZW', 'Zimbabwe', '4');
 
--- ----------------------------
--- Table structure for "TRAINING"."DEPARTMENTS"
--- ----------------------------
+
 DROP TABLE "TRAINING"."DEPARTMENTS";
 CREATE TABLE "TRAINING"."DEPARTMENTS" (
 "DEPARTMENT_ID" NUMBER(4) NOT NULL ,
@@ -77,18 +54,8 @@ NOCOMPRESS
 NOCACHE
 
 ;
-COMMENT ON TABLE "TRAINING"."DEPARTMENTS" IS 'Departments table that shows details of departments where employees
-work. Contains 27 rows; references with locations, employees, and job_history tables.';
-COMMENT ON COLUMN "TRAINING"."DEPARTMENTS"."DEPARTMENT_ID" IS 'Primary key column of departments table.';
-COMMENT ON COLUMN "TRAINING"."DEPARTMENTS"."DEPARTMENT_NAME" IS 'A not null column that shows name of a department. Administration,
-Marketing, Purchasing, Human Resources, Shipping, IT, Executive, Public
-Relations, Sales, Finance, and Accounting. ';
-COMMENT ON COLUMN "TRAINING"."DEPARTMENTS"."MANAGER_ID" IS 'Manager_id of a department. Foreign key to employee_id column of employees table. The manager_id column of the employee table references this column.';
-COMMENT ON COLUMN "TRAINING"."DEPARTMENTS"."LOCATION_ID" IS 'Location id where a department is located. Foreign key to location_id column of locations table.';
 
--- ----------------------------
--- Records of DEPARTMENTS
--- ----------------------------
+
 INSERT INTO "TRAINING"."DEPARTMENTS" VALUES ('10', 'Administration', '200', '1700');
 INSERT INTO "TRAINING"."DEPARTMENTS" VALUES ('20', 'Marketing', '201', '1800');
 INSERT INTO "TRAINING"."DEPARTMENTS" VALUES ('30', 'Purchasing', '114', '1700');
@@ -117,9 +84,6 @@ INSERT INTO "TRAINING"."DEPARTMENTS" VALUES ('250', 'Retail Sales', null, '1700'
 INSERT INTO "TRAINING"."DEPARTMENTS" VALUES ('260', 'Recruiting', null, '1700');
 INSERT INTO "TRAINING"."DEPARTMENTS" VALUES ('270', 'Payroll', null, '1700');
 
--- ----------------------------
--- Table structure for "TRAINING"."EMPLOYEES"
--- ----------------------------
 DROP TABLE "TRAINING"."EMPLOYEES";
 CREATE TABLE "TRAINING"."EMPLOYEES" (
 "EMPLOYEE_ID" NUMBER(6) NOT NULL ,
@@ -139,29 +103,7 @@ NOCOMPRESS
 NOCACHE
 
 ;
-COMMENT ON TABLE "TRAINING"."EMPLOYEES" IS 'employees table. Contains 107 rows. References with departments,
-jobs, job_history tables. Contains a self reference.';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."EMPLOYEE_ID" IS 'Primary key of employees table.';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."FIRST_NAME" IS 'First name of the employee. A not null column.';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."LAST_NAME" IS 'Last name of the employee. A not null column.';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."EMAIL" IS 'Email id of the employee';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."PHONE_NUMBER" IS 'Phone number of the employee; includes country code and area code';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."HIRE_DATE" IS 'Date when the employee started on this job. A not null column.';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."JOB_ID" IS 'Current job of the employee; foreign key to job_id column of the
-jobs table. A not null column.';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."SALARY" IS 'Monthly salary of the employee. Must be greater
-than zero (enforced by constraint emp_salary_min)';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."COMMISSION_PCT" IS 'Commission percentage of the employee; Only employees in sales
-department elgible for commission percentage';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."MANAGER_ID" IS 'Manager id of the employee; has same domain as manager_id in
-departments table. Foreign key to employee_id column of employees table.
-(useful for reflexive joins and CONNECT BY query)';
-COMMENT ON COLUMN "TRAINING"."EMPLOYEES"."DEPARTMENT_ID" IS 'Department id where employee works; foreign key to department_id
-column of the departments table';
 
--- ----------------------------
--- Records of EMPLOYEES
--- ----------------------------
 INSERT INTO "TRAINING"."EMPLOYEES" VALUES ('198', 'Donald', 'OConnell', 'DOCONNEL', '650.507.9833', TO_DATE('1999-06-21 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SH_CLERK', '2600', null, '124', '50');
 INSERT INTO "TRAINING"."EMPLOYEES" VALUES ('199', 'Douglas', 'Grant', 'DGRANT', '650.507.9844', TO_DATE('2000-01-13 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SH_CLERK', '2600', null, '124', '50');
 INSERT INTO "TRAINING"."EMPLOYEES" VALUES ('200', 'Jennifer', 'Whalen', 'JWHALEN', '515.123.4444', TO_DATE('1987-09-17 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AD_ASST', '4400', null, '101', '10');
@@ -270,9 +212,6 @@ INSERT INTO "TRAINING"."EMPLOYEES" VALUES ('195', 'Vance', 'Jones', 'VJONES', '6
 INSERT INTO "TRAINING"."EMPLOYEES" VALUES ('196', 'Alana', 'Walsh', 'AWALSH', '650.507.9811', TO_DATE('1998-04-24 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SH_CLERK', '3100', null, '124', '50');
 INSERT INTO "TRAINING"."EMPLOYEES" VALUES ('197', 'Kevin', 'Feeney', 'KFEENEY', '650.507.9822', TO_DATE('1998-05-23 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SH_CLERK', '3000', null, '124', '50');
 
--- ----------------------------
--- Table structure for "TRAINING"."JOB_HISTORY"
--- ----------------------------
 DROP TABLE "TRAINING"."JOB_HISTORY";
 CREATE TABLE "TRAINING"."JOB_HISTORY" (
 "EMPLOYEE_ID" NUMBER(6) NOT NULL ,
@@ -286,26 +225,6 @@ NOCOMPRESS
 NOCACHE
 
 ;
-COMMENT ON TABLE "TRAINING"."JOB_HISTORY" IS 'Table that stores job history of the employees. If an employee
-changes departments within the job or changes jobs within the department,
-new rows get inserted into this table with old job information of the
-employee. Contains a complex primary key: employee_id+start_date.
-Contains 25 rows. References with jobs, employees, and departments tables.';
-COMMENT ON COLUMN "TRAINING"."JOB_HISTORY"."EMPLOYEE_ID" IS 'A not null column in the complex primary key employee_id+start_date.
-Foreign key to employee_id column of the employee table';
-COMMENT ON COLUMN "TRAINING"."JOB_HISTORY"."START_DATE" IS 'A not null column in the complex primary key employee_id+start_date.
-Must be less than the end_date of the job_history table. (enforced by
-constraint jhist_date_interval)';
-COMMENT ON COLUMN "TRAINING"."JOB_HISTORY"."END_DATE" IS 'Last day of the employee in this job role. A not null column. Must be
-greater than the start_date of the job_history table.
-(enforced by constraint jhist_date_interval)';
-COMMENT ON COLUMN "TRAINING"."JOB_HISTORY"."JOB_ID" IS 'Job role in which the employee worked in the past; foreign key to
-job_id column in the jobs table. A not null column.';
-COMMENT ON COLUMN "TRAINING"."JOB_HISTORY"."DEPARTMENT_ID" IS 'Department id in which the employee worked in the past; foreign key to deparment_id column in the departments table';
-
--- ----------------------------
--- Records of JOB_HISTORY
--- ----------------------------
 INSERT INTO "TRAINING"."JOB_HISTORY" VALUES ('102', TO_DATE('1993-01-13 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('1998-07-24 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'IT_PROG', '60');
 INSERT INTO "TRAINING"."JOB_HISTORY" VALUES ('101', TO_DATE('1989-09-21 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('1993-10-27 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AC_ACCOUNT', '110');
 INSERT INTO "TRAINING"."JOB_HISTORY" VALUES ('101', TO_DATE('1993-10-28 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('1997-03-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AC_MGR', '110');
@@ -317,9 +236,6 @@ INSERT INTO "TRAINING"."JOB_HISTORY" VALUES ('176', TO_DATE('1998-03-24 00:00:00
 INSERT INTO "TRAINING"."JOB_HISTORY" VALUES ('176', TO_DATE('1999-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('1999-12-31 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SA_MAN', '80');
 INSERT INTO "TRAINING"."JOB_HISTORY" VALUES ('200', TO_DATE('1994-07-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('1998-12-31 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AC_ACCOUNT', '90');
 
--- ----------------------------
--- Table structure for "TRAINING"."JOBS"
--- ----------------------------
 DROP TABLE "TRAINING"."JOBS";
 CREATE TABLE "TRAINING"."JOBS" (
 "JOB_ID" VARCHAR2(10 BYTE) NOT NULL ,
@@ -332,16 +248,6 @@ NOCOMPRESS
 NOCACHE
 
 ;
-COMMENT ON TABLE "TRAINING"."JOBS" IS 'jobs table with job titles and salary ranges. Contains 19 rows.
-References with employees and job_history table.';
-COMMENT ON COLUMN "TRAINING"."JOBS"."JOB_ID" IS 'Primary key of jobs table.';
-COMMENT ON COLUMN "TRAINING"."JOBS"."JOB_TITLE" IS 'A not null column that shows job title, e.g. AD_VP, FI_ACCOUNTANT';
-COMMENT ON COLUMN "TRAINING"."JOBS"."MIN_SALARY" IS 'Minimum salary for a job title.';
-COMMENT ON COLUMN "TRAINING"."JOBS"."MAX_SALARY" IS 'Maximum salary for a job title';
-
--- ----------------------------
--- Records of JOBS
--- ----------------------------
 INSERT INTO "TRAINING"."JOBS" VALUES ('AD_PRES', 'President', '20000', '40000');
 INSERT INTO "TRAINING"."JOBS" VALUES ('AD_VP', 'Administration Vice President', '15000', '30000');
 INSERT INTO "TRAINING"."JOBS" VALUES ('AD_ASST', 'Administration Assistant', '3000', '6000');
@@ -362,9 +268,7 @@ INSERT INTO "TRAINING"."JOBS" VALUES ('MK_REP', 'Marketing Representative', '400
 INSERT INTO "TRAINING"."JOBS" VALUES ('TRAINING_REP', 'Human Resources Representative', '4000', '9000');
 INSERT INTO "TRAINING"."JOBS" VALUES ('PR_REP', 'Public Relations Representative', '4500', '10500');
 
--- ----------------------------
--- Table structure for "TRAINING"."LOCATIONS"
--- ----------------------------
+
 DROP TABLE "TRAINING"."LOCATIONS";
 CREATE TABLE "TRAINING"."LOCATIONS" (
 "LOCATION_ID" NUMBER(4) NOT NULL ,
@@ -379,25 +283,6 @@ NOCOMPRESS
 NOCACHE
 
 ;
-COMMENT ON TABLE "TRAINING"."LOCATIONS" IS 'Locations table that contains specific address of a specific office,
-warehouse, and/or production site of a company. Does not store addresses /
-locations of customers. Contains 23 rows; references with the
-departments and countries tables. ';
-COMMENT ON COLUMN "TRAINING"."LOCATIONS"."LOCATION_ID" IS 'Primary key of locations table';
-COMMENT ON COLUMN "TRAINING"."LOCATIONS"."STREET_ADDRESS" IS 'Street address of an office, warehouse, or production site of a company.
-Contains building number and street name';
-COMMENT ON COLUMN "TRAINING"."LOCATIONS"."POSTAL_CODE" IS 'Postal code of the location of an office, warehouse, or production site
-of a company. ';
-COMMENT ON COLUMN "TRAINING"."LOCATIONS"."CITY" IS 'A not null column that shows city where an office, warehouse, or
-production site of a company is located. ';
-COMMENT ON COLUMN "TRAINING"."LOCATIONS"."STATE_PROVINCE" IS 'State or Province where an office, warehouse, or production site of a
-company is located.';
-COMMENT ON COLUMN "TRAINING"."LOCATIONS"."COUNTRY_ID" IS 'Country where an office, warehouse, or production site of a company is
-located. Foreign key to country_id column of the countries table.';
-
--- ----------------------------
--- Records of LOCATIONS
--- ----------------------------
 INSERT INTO "TRAINING"."LOCATIONS" VALUES ('1000', '1297 Via Cola di Rie', '00989', 'Roma', null, 'IT');
 INSERT INTO "TRAINING"."LOCATIONS" VALUES ('1100', '93091 Calle della Testa', '10934', 'Venice', null, 'IT');
 INSERT INTO "TRAINING"."LOCATIONS" VALUES ('1200', '2017 Shinjuku-ku', '1689', 'Tokyo', 'Tokyo Prefecture', 'JP');
@@ -422,9 +307,6 @@ INSERT INTO "TRAINING"."LOCATIONS" VALUES ('3000', 'Murtenstrasse 921', '3095', 
 INSERT INTO "TRAINING"."LOCATIONS" VALUES ('3100', 'Pieter Breughelstraat 837', '3029SK', 'Utrecht', 'Utrecht', 'NL');
 INSERT INTO "TRAINING"."LOCATIONS" VALUES ('3200', 'Mariano Escobedo 9991', '11932', 'Mexico City', 'Distrito Federal,', 'MX');
 
--- ----------------------------
--- Table structure for "TRAINING"."REGIONS"
--- ----------------------------
 DROP TABLE "TRAINING"."REGIONS";
 CREATE TABLE "TRAINING"."REGIONS" (
 "REGION_ID" NUMBER NOT NULL ,
@@ -436,17 +318,11 @@ NOCACHE
 
 ;
 
--- ----------------------------
--- Records of REGIONS
--- ----------------------------
 INSERT INTO "TRAINING"."REGIONS" VALUES ('1', 'Europe');
 INSERT INTO "TRAINING"."REGIONS" VALUES ('2', 'Americas');
 INSERT INTO "TRAINING"."REGIONS" VALUES ('3', 'Asia');
 INSERT INTO "TRAINING"."REGIONS" VALUES ('4', 'Middle East and Africa');
 
--- ----------------------------
--- View structure for "TRAINING"."EMP_DETAILS_VIEW"
--- ----------------------------
 CREATE OR REPLACE FORCE VIEW "TRAINING"."EMP_DETAILS_VIEW" AS 
 SELECT
   e.employee_id,
@@ -480,9 +356,6 @@ WHERE e.department_id = d.department_id
 WITH READ ONLY 
 CONSTRAINTS "SYS_C005392";
 
--- ----------------------------
--- Procedure structure for "TRAINING"."ADD_JOB_HISTORY"
--- ----------------------------
 CREATE OR REPLACE PROCEDURE "TRAINING"."ADD_JOB_HISTORY"
   (  p_emp_id          job_history.employee_id%type
    , p_start_date      job_history.start_date%type
@@ -498,9 +371,6 @@ BEGIN
 END add_job_history;
 /
 
--- ----------------------------
--- Procedure structure for "TRAINING"."SECURE_DML"
--- ----------------------------
 CREATE OR REPLACE PROCEDURE "TRAINING"."SECURE_DML"
 IS
 BEGIN
@@ -511,10 +381,6 @@ BEGIN
   END IF;
 END secure_dml;
 /
-
--- ----------------------------
--- Sequence structure for "TRAINING"."DEPARTMENTS_SEQ"
--- ----------------------------
 DROP SEQUENCE "TRAINING"."DEPARTMENTS_SEQ";
 CREATE SEQUENCE "TRAINING"."DEPARTMENTS_SEQ"
  INCREMENT BY 10
@@ -523,9 +389,6 @@ CREATE SEQUENCE "TRAINING"."DEPARTMENTS_SEQ"
  START WITH 280
  NOCACHE ;
 
--- ----------------------------
--- Sequence structure for "TRAINING"."EMPLOYEES_SEQ"
--- ----------------------------
 DROP SEQUENCE "TRAINING"."EMPLOYEES_SEQ";
 CREATE SEQUENCE "TRAINING"."EMPLOYEES_SEQ"
  INCREMENT BY 1
@@ -534,9 +397,6 @@ CREATE SEQUENCE "TRAINING"."EMPLOYEES_SEQ"
  START WITH 207
  NOCACHE ;
 
--- ----------------------------
--- Sequence structure for "TRAINING"."LOCATIONS_SEQ"
--- ----------------------------
 DROP SEQUENCE "TRAINING"."LOCATIONS_SEQ";
 CREATE SEQUENCE "TRAINING"."LOCATIONS_SEQ"
  INCREMENT BY 100
@@ -545,35 +405,16 @@ CREATE SEQUENCE "TRAINING"."LOCATIONS_SEQ"
  START WITH 3300
  NOCACHE ;
 
--- ----------------------------
--- Indexes structure for table COUNTRIES
--- ----------------------------
-
--- ----------------------------
--- Checks structure for table "TRAINING"."COUNTRIES"
--- ----------------------------
 ALTER TABLE "TRAINING"."COUNTRIES" ADD CHECK ("COUNTRY_ID" IS NOT NULL);
 
--- ----------------------------
--- Indexes structure for table DEPARTMENTS
--- ----------------------------
 CREATE INDEX "TRAINING"."DEPT_LOCATION_IX"
 ON "TRAINING"."DEPARTMENTS" ("LOCATION_ID" ASC)
 NOLOGGING;
 
--- ----------------------------
--- Checks structure for table "TRAINING"."DEPARTMENTS"
--- ----------------------------
 ALTER TABLE "TRAINING"."DEPARTMENTS" ADD CHECK ("DEPARTMENT_NAME" IS NOT NULL);
 
--- ----------------------------
--- Primary Key structure for table "TRAINING"."DEPARTMENTS"
--- ----------------------------
 ALTER TABLE "TRAINING"."DEPARTMENTS" ADD PRIMARY KEY ("DEPARTMENT_ID");
 
--- ----------------------------
--- Indexes structure for table EMPLOYEES
--- ----------------------------
 CREATE INDEX "TRAINING"."EMP_DEPARTMENT_IX"
 ON "TRAINING"."EMPLOYEES" ("DEPARTMENT_ID" ASC)
 NOLOGGING;
@@ -587,9 +428,6 @@ CREATE INDEX "TRAINING"."EMP_NAME_IX"
 ON "TRAINING"."EMPLOYEES" ("LAST_NAME" ASC, "FIRST_NAME" ASC)
 NOLOGGING;
 
--- ----------------------------
--- Triggers structure for table "TRAINING"."EMPLOYEES"
--- ----------------------------
 CREATE OR REPLACE TRIGGER "TRAINING"."SECURE_EMPLOYEES" BEFORE INSERT OR DELETE OR UPDATE ON "TRAINING"."EMPLOYEES" REFERENCING OLD AS "OLD" NEW AS "NEW"
 BEGIN
   secure_dml;
@@ -600,28 +438,19 @@ BEGIN
                   :old.job_id, :old.department_id);
 END;;
 
--- ----------------------------
--- Uniques structure for table "TRAINING"."EMPLOYEES"
--- ----------------------------
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD UNIQUE ("EMAIL");
 
--- ----------------------------
--- Checks structure for table "TRAINING"."EMPLOYEES"
--- ----------------------------
+
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD CHECK ("EMAIL" IS NOT NULL);
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD CHECK ("HIRE_DATE" IS NOT NULL);
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD CHECK ("JOB_ID" IS NOT NULL);
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD CHECK ("LAST_NAME" IS NOT NULL);
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD CHECK (salary > 0);
 
--- ----------------------------
--- Primary Key structure for table "TRAINING"."EMPLOYEES"
--- ----------------------------
+
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD PRIMARY KEY ("EMPLOYEE_ID");
 
--- ----------------------------
--- Indexes structure for table JOB_HISTORY
--- ----------------------------
+
 CREATE INDEX "TRAINING"."JHIST_DEPARTMENT_IX"
 ON "TRAINING"."JOB_HISTORY" ("DEPARTMENT_ID" ASC)
 NOLOGGING;
@@ -632,37 +461,19 @@ CREATE INDEX "TRAINING"."JHIST_JOB_IX"
 ON "TRAINING"."JOB_HISTORY" ("JOB_ID" ASC)
 NOLOGGING;
 
--- ----------------------------
--- Checks structure for table "TRAINING"."JOB_HISTORY"
--- ----------------------------
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD CHECK (end_date > start_date);
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD CHECK ("EMPLOYEE_ID" IS NOT NULL);
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD CHECK ("END_DATE" IS NOT NULL);
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD CHECK ("JOB_ID" IS NOT NULL);
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD CHECK ("START_DATE" IS NOT NULL);
 
--- ----------------------------
--- Primary Key structure for table "TRAINING"."JOB_HISTORY"
--- ----------------------------
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD PRIMARY KEY ("EMPLOYEE_ID", "START_DATE");
 
--- ----------------------------
--- Indexes structure for table JOBS
--- ----------------------------
 
--- ----------------------------
--- Checks structure for table "TRAINING"."JOBS"
--- ----------------------------
 ALTER TABLE "TRAINING"."JOBS" ADD CHECK ("JOB_TITLE" IS NOT NULL);
 
--- ----------------------------
--- Primary Key structure for table "TRAINING"."JOBS"
--- ----------------------------
 ALTER TABLE "TRAINING"."JOBS" ADD PRIMARY KEY ("JOB_ID");
 
--- ----------------------------
--- Indexes structure for table LOCATIONS
--- ----------------------------
 CREATE INDEX "TRAINING"."LOC_CITY_IX"
 ON "TRAINING"."LOCATIONS" ("CITY" ASC)
 NOLOGGING;
@@ -673,56 +484,26 @@ CREATE INDEX "TRAINING"."LOC_STATE_PROVINCE_IX"
 ON "TRAINING"."LOCATIONS" ("STATE_PROVINCE" ASC)
 NOLOGGING;
 
--- ----------------------------
--- Checks structure for table "TRAINING"."LOCATIONS"
--- ----------------------------
 ALTER TABLE "TRAINING"."LOCATIONS" ADD CHECK ("CITY" IS NOT NULL);
 
--- ----------------------------
--- Primary Key structure for table "TRAINING"."LOCATIONS"
--- ----------------------------
 ALTER TABLE "TRAINING"."LOCATIONS" ADD PRIMARY KEY ("LOCATION_ID");
 
--- ----------------------------
--- Indexes structure for table REGIONS
--- ----------------------------
 
--- ----------------------------
--- Checks structure for table "TRAINING"."REGIONS"
--- ----------------------------
 ALTER TABLE "TRAINING"."REGIONS" ADD CHECK ("REGION_ID" IS NOT NULL);
 
--- ----------------------------
--- Primary Key structure for table "TRAINING"."REGIONS"
--- ----------------------------
 ALTER TABLE "TRAINING"."REGIONS" ADD PRIMARY KEY ("REGION_ID");
 
--- ----------------------------
--- Foreign Key structure for table "TRAINING"."COUNTRIES"
--- ----------------------------
 ALTER TABLE "TRAINING"."COUNTRIES" ADD FOREIGN KEY ("REGION_ID") REFERENCES "TRAINING"."REGIONS" ("REGION_ID");
 
--- ----------------------------
--- Foreign Key structure for table "TRAINING"."DEPARTMENTS"
--- ----------------------------
 ALTER TABLE "TRAINING"."DEPARTMENTS" ADD FOREIGN KEY ("LOCATION_ID") REFERENCES "TRAINING"."LOCATIONS" ("LOCATION_ID");
 ALTER TABLE "TRAINING"."DEPARTMENTS" ADD FOREIGN KEY ("MANAGER_ID") REFERENCES "TRAINING"."EMPLOYEES" ("EMPLOYEE_ID");
 
--- ----------------------------
--- Foreign Key structure for table "TRAINING"."EMPLOYEES"
--- ----------------------------
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD FOREIGN KEY ("DEPARTMENT_ID") REFERENCES "TRAINING"."DEPARTMENTS" ("DEPARTMENT_ID");
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD FOREIGN KEY ("JOB_ID") REFERENCES "TRAINING"."JOBS" ("JOB_ID");
 ALTER TABLE "TRAINING"."EMPLOYEES" ADD FOREIGN KEY ("MANAGER_ID") REFERENCES "TRAINING"."EMPLOYEES" ("EMPLOYEE_ID");
 
--- ----------------------------
--- Foreign Key structure for table "TRAINING"."JOB_HISTORY"
--- ----------------------------
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD FOREIGN KEY ("DEPARTMENT_ID") REFERENCES "TRAINING"."DEPARTMENTS" ("DEPARTMENT_ID");
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD FOREIGN KEY ("EMPLOYEE_ID") REFERENCES "TRAINING"."EMPLOYEES" ("EMPLOYEE_ID");
 ALTER TABLE "TRAINING"."JOB_HISTORY" ADD FOREIGN KEY ("JOB_ID") REFERENCES "TRAINING"."JOBS" ("JOB_ID");
 
--- ----------------------------
--- Foreign Key structure for table "TRAINING"."LOCATIONS"
--- ----------------------------
 ALTER TABLE "TRAINING"."LOCATIONS" ADD FOREIGN KEY ("COUNTRY_ID") REFERENCES "TRAINING"."COUNTRIES" ("COUNTRY_ID");
