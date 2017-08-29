@@ -10,10 +10,7 @@ PRIMARY KEY ("COUNTRY_ID")
 ORGANIZATION INDEX NOLOGGING NOCOMPRESS PCTTTRAININGESHOLD 50 
 
 ;
-COMMENT ON TABLE "TRAINING"."COUNTRIES" IS 'country table. Contains 25 rows. References with locations table.';
-COMMENT ON COLUMN "TRAINING"."COUNTRIES"."COUNTRY_ID" IS 'Primary key of countries table.';
-COMMENT ON COLUMN "TRAINING"."COUNTRIES"."COUNTRY_NAME" IS 'Country name';
-COMMENT ON COLUMN "TRAINING"."COUNTRIES"."REGION_ID" IS 'Region ID for the country. Foreign key to region_id column in the departments table.';
+
 
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('AR', 'Argentina', '2');
 INSERT INTO "TRAINING"."COUNTRIES" VALUES ('AU', 'Australia', '3');
