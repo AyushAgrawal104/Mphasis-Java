@@ -1,0 +1,4 @@
+create or replace PROCEDURE squareNum(x IN OUT number) IS 
+ BEGIN  
+  x := x * x; 
+END; 

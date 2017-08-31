@@ -1,0 +1,19 @@
+DECLARE 
+   
+   custId CUSTOMERS.id%type;
+   custName CUSTOMERS.name%type; 
+   custAddr CUSTOMERS.address%type;
+ 
+   CURSOR c_customers is 
+      SELECT id, name, address FROM customers; 
+BEGIN 
+   OPEN c_customers; 
+
+   LOOP 
+   FETCH c_customers into custId, custName, custAddr; 
+      EXIT WHEN c_customers%notfound; 
+      dbms_output.put_line('Cust Id: '||custId || ' Cust Name:  ' || custName || ' Addres:' || custAddr); 
+   END LOOP; 
+   CLOSE c_customers; 
+END; 
+/

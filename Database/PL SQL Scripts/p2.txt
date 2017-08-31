@@ -1,0 +1,7 @@
+CREATE OR REPLACE PROCEDURE p2(maxSal out number) 
+IS 
+BEGIN 
+   
+select max(sal) into maxSal from emp;
+ 
+END; 

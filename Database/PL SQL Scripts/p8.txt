@@ -1,0 +1,7 @@
+create table customer(id number,
+name varchar2(20),
+age number(2),
+address varchar2(30),
+salary number(5)
+);
+

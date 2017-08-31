@@ -1,0 +1,10 @@
+DECLARE
+
+maxSal number;
+
+BEGIN 
+   p2(maxSal);
+   dbms_output.put_line('Max Salary is  '|| maxSal); 
+
+END; 
+/

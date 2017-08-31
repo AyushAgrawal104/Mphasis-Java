@@ -1,0 +1,8 @@
+DECLARE 
+   a number;  
+BEGIN 
+   a:= 23; 
+   squareNum(a); 
+   dbms_output.put_line(' Square of (23): ' || a); 
+END; 
+/

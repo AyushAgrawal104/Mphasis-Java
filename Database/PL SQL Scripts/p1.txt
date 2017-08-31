@@ -1,0 +1,5 @@
+CREATE OR REPLACE PROCEDURE p1(no in number) 
+AS 
+BEGIN 
+   dbms_output.put_line('Square of '||no|| ' is '||no*no); 
+END; 
