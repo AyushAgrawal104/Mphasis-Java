@@ -13,7 +13,7 @@ public class CreteTableDemo {
 		try {
 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// System.out.println("-- Driver class loded");
+			// System.out.println("-- Driver class loaded");
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:mphasis", "scott", "tiger");
 			// System.out.println("-- Connection Established with "+con);
 
