@@ -11,15 +11,21 @@ public class ListProducts_ResultSetTypes {
 
 		ProductDaoImpl prodDao = new ProductDaoImpl();
 
-		
+		Product prod=new Product();
+		prod.setProdId("P001");
+		prod.setProdName("IPhone");
+		prod.setPrice(44753);
 
-		Product p = prodDao.findProduct_v2();
+		
+		prodDao.updateProduct_v1(prod);
+		
+		/*Product p = prodDao.findProduct_v2();
 
 		System.out.println(p.getProdId());
 		System.out.println(p.getProdName());
 		System.out.println(p.getPrice());
 		System.out.println("--------------------");
-
+*/
 	}
 
 }
