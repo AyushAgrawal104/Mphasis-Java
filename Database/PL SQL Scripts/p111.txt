@@ -1,0 +1,8 @@
+CREATE OR REPLACE PROCEDURE p11(pid in varchar2(10))
+AS 
+BEGIN 
+   
+   update product set product_name='New Value' where product_id=pid;
+commit;
+
+END; 

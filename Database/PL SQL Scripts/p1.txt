@@ -1,5 +1,8 @@
-CREATE OR REPLACE PROCEDURE p1(no in number) 
+CREATE OR REPLACE PROCEDURE p11 
 AS 
 BEGIN 
-   dbms_output.put_line('Square of '||no|| ' is '||no*no); 
+   
+   update product set product_name='Monitor' where product_id='P001';
+commit;
+
 END; 

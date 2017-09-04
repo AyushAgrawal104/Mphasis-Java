@@ -2,6 +2,7 @@ package com;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class CreteTableDemo {
@@ -13,7 +14,7 @@ public class CreteTableDemo {
 		try {
 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// System.out.println("-- Driver class loaded");
+			 System.out.println("-- Driver class loaded");
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:mphasis", "scott", "tiger");
 			// System.out.println("-- Connection Established with "+con);
 
@@ -21,14 +22,18 @@ public class CreteTableDemo {
 
 			Statement stmt = con.createStatement();
 
-			String qry = "create table bank(cust_id number primary key,cust_name varchar2(20))";
+			//String qry = "create table bank(cust_id number primary key,cust_name varchar2(20))";
 
-			stmt.executeUpdate(qry);
+			//stmt.executeUpdate(qry);
 
 			System.out.println("--- Query Processed..");
 
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			System.out.println("--- Failed due to " + e);
+		} catch (ClassNotFoundException cnf) {
+
+		} catch (Exception ee) {
+
 		}
 
 	}
