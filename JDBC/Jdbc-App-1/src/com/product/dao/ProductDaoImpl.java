@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
+
 
 import static com.product.dao.DbUtils.*;
 import com.product.model.Product;
