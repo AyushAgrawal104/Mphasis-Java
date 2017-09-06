@@ -7,7 +7,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class Test {
+import com.manytoone.Employee;
+
+
+public class ManyToOne_Fetch {
 
 	public static void main(String[] args) {
 
@@ -19,30 +22,16 @@ public class Test {
 		SessionFactory sf = cf.buildSessionFactory(sr);
 
 		Session ses = sf.openSession();
-
-		/*
-		 * Employee emp=new Employee();
-		 * 
-		 * emp.setEmpId(1); emp.setEmpName("James"); emp.setSalary(3863484);
-		 * 
-		 * 
-		 * ses.saveOrUpdate(emp);
-		 */
-
-		Employee emp = (Employee) ses.get(Employee.class, 5);
-
-		emp.setEmpName("Praveen Reddy S");
-		// emp.setSalary(86565);
-		ses.update(emp);
+		Employee emp=	(Employee) ses.get(Employee.class, 1024);
+		System.out.println("Id: "+emp.getEmpId());
+		System.out.println("Name: "+emp.getEmpName());
+		System.out.println("Salary: "+emp.getSalary());
 		
-		ses.close();
-		ses=sf.openSession();
-		ses.merge(emp);
+		System.out.println("Dept Id: "+emp.getDept().getDeptId());
+		System.out.println("Dept Name: "+emp.getDept().getDeptName());
 		
 		
-		ses.beginTransaction().commit();
-
-		System.out.println("--- Done ---");
+		
 
 	}
 

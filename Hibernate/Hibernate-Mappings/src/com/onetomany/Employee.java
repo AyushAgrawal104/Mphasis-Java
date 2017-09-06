@@ -1,21 +1,26 @@
-package com;
+package com.onetomany;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Employee {
 
 	@Id
-//	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "emp_id")
 	private int empId;
-	@Column(name = "emp_name")
 	private String empName;
 	private double salary;
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(int empId, String empName, double salary) {
+
+		this.empId = empId;
+		this.empName = empName;
+		this.salary = salary;
+	}
 
 	public int getEmpId() {
 		return empId;

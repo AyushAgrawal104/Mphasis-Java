@@ -7,7 +7,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class Test {
+import com.onetomany.Department;
+import com.onetomany.Employee;
+
+public class OneToMany_Fetch {
 
 	public static void main(String[] args) {
 
@@ -20,29 +23,18 @@ public class Test {
 
 		Session ses = sf.openSession();
 
-		/*
-		 * Employee emp=new Employee();
-		 * 
-		 * emp.setEmpId(1); emp.setEmpName("James"); emp.setSalary(3863484);
-		 * 
-		 * 
-		 * ses.saveOrUpdate(emp);
-		 */
-
-		Employee emp = (Employee) ses.get(Employee.class, 5);
-
-		emp.setEmpName("Praveen Reddy S");
-		// emp.setSalary(86565);
-		ses.update(emp);
+		Department dept = (Department) ses.get(Department.class, 11);
+		System.out.println("Dept Id: " + dept.getDeptId());
+		System.out.println("Dept Name: " + dept.getDeptName());
 		
-		ses.close();
-		ses=sf.openSession();
-		ses.merge(emp);
+		for(Employee emp:dept.getEmps()) {
+			System.out.println("Id: "+emp.getEmpId());
+			System.out.println("Name: "+emp.getEmpName());
+			System.out.println("Salary: "+emp.getSalary());
+			System.out.println("-----------------------------");
+			
+		}
 		
-		
-		ses.beginTransaction().commit();
-
-		System.out.println("--- Done ---");
 
 	}
 

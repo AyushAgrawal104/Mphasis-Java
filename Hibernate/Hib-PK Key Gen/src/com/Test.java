@@ -12,37 +12,36 @@ public class Test {
 	public static void main(String[] args) {
 
 		Configuration cf = new Configuration().configure();
+		
 
-		StandardServiceRegistryBuilder srb = new StandardServiceRegistryBuilder();
+		 StandardServiceRegistryBuilder srb = new StandardServiceRegistryBuilder();
 		srb.applySettings(cf.getProperties());
 		ServiceRegistry sr = srb.build();
 		SessionFactory sf = cf.buildSessionFactory(sr);
 
 		Session ses = sf.openSession();
 
-		/*
-		 * Employee emp=new Employee();
-		 * 
-		 * emp.setEmpId(1); emp.setEmpName("James"); emp.setSalary(3863484);
-		 * 
-		 * 
-		 * ses.saveOrUpdate(emp);
-		 */
-
-		Employee emp = (Employee) ses.get(Employee.class, 5);
-
-		emp.setEmpName("Praveen Reddy S");
-		// emp.setSalary(86565);
-		ses.update(emp);
 		
-		ses.close();
-		ses=sf.openSession();
-		ses.merge(emp);
 		
+		Employee emp=   (Employee) ses.load(Employee.class, 12);
+	/*	
+		emp.setEmpName("Sathi");
+		emp.setSalary(6555);
+		ses.update(emp);*/
+		
+		ses.delete(emp);
 		
 		ses.beginTransaction().commit();
-
+		
+		//System.out.println("Emp Id: "+emp.getEmpId());
+	/*	System.out.println("Name; "+emp.getEmpName());
+		System.out.println("Salary: "+emp.getSalary());
+		System.out.println("------------------------------------");*/
+		
+		
 		System.out.println("--- Done ---");
+		sf.close();
+		
 
 	}
 

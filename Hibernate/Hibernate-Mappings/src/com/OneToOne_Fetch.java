@@ -1,5 +1,7 @@
 package com;
 
+import javax.swing.plaf.synth.SynthScrollBarUI;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -7,7 +9,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class Test {
+import com.onetoone.Department;
+import com.onetoone.Employee;
+
+public class OneToOne_Fetch {
 
 	public static void main(String[] args) {
 
@@ -20,27 +25,19 @@ public class Test {
 
 		Session ses = sf.openSession();
 
-		/*
-		 * Employee emp=new Employee();
-		 * 
-		 * emp.setEmpId(1); emp.setEmpName("James"); emp.setSalary(3863484);
-		 * 
-		 * 
-		 * ses.saveOrUpdate(emp);
-		 */
-
-		Employee emp = (Employee) ses.get(Employee.class, 5);
-
-		emp.setEmpName("Praveen Reddy S");
-		// emp.setSalary(86565);
-		ses.update(emp);
 		
-		ses.close();
-		ses=sf.openSession();
-		ses.merge(emp);
+		Employee emp= (Employee) ses.get(Employee.class, 1025);
+		
+		System.out.println("Id: "+emp.getEmpId());
+		System.out.println("Name: "+emp.getEmpName());
+		System.out.println("Salary: "+emp.getSalary());
+		
+		System.out.println("Dept Id: "+emp.getDept().getDeptId());
+		System.out.println("Dept Name: "+emp.getDept().getDeptName());
 		
 		
-		ses.beginTransaction().commit();
+		
+		
 
 		System.out.println("--- Done ---");
 

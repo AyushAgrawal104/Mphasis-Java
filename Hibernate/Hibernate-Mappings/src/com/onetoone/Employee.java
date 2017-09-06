@@ -1,21 +1,33 @@
-package com;
+package com.onetoone;
 
-import javax.persistence.Column;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+
 
 @Entity
 public class Employee {
 
 	@Id
-//	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "emp_id")
 	private int empId;
-	@Column(name = "emp_name")
 	private String empName;
 	private double salary;
+
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="deptId")
+	private Department dept;
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
 
 	public int getEmpId() {
 		return empId;

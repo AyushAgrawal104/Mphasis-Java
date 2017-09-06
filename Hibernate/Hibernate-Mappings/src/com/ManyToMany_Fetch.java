@@ -7,7 +7,12 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class Test {
+import com.manytomany.Course;
+import com.manytomany.Student;
+import com.manytoone.Department;
+import com.manytoone.Employee;
+
+public class ManyToMany_Fetch {
 
 	public static void main(String[] args) {
 
@@ -20,27 +25,18 @@ public class Test {
 
 		Session ses = sf.openSession();
 
-		/*
-		 * Employee emp=new Employee();
-		 * 
-		 * emp.setEmpId(1); emp.setEmpName("James"); emp.setSalary(3863484);
-		 * 
-		 * 
-		 * ses.saveOrUpdate(emp);
-		 */
+		Student std = (Student) ses.get(Student.class, 1025);
 
-		Employee emp = (Employee) ses.get(Employee.class, 5);
+		System.out.println("Std id: " + std.getStdId());
+		System.out.println("Name: " + std.getStdName());
 
-		emp.setEmpName("Praveen Reddy S");
-		// emp.setSalary(86565);
-		ses.update(emp);
-		
-		ses.close();
-		ses=sf.openSession();
-		ses.merge(emp);
-		
-		
-		ses.beginTransaction().commit();
+		for (Course c : std.getCourses()) {
+			System.out.println("Cours Id: " + c.getCourseId());
+			System.out.println("Course Name: " + c.getCourseName());
+			System.out.println("Price: " + c.getPrice());
+			System.out.println("--------------------------------");
+
+		}
 
 		System.out.println("--- Done ---");
 

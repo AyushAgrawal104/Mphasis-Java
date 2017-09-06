@@ -34,8 +34,17 @@
 
 		<!-- Mapping Resources -->
 		
-		<mapping class="com.Employee" />
-		<mapping class="com.Report" />
+<!-- 		<mapping class="com.onetoone.Employee" /> -->
+<!-- 		<mapping class="com.onetoone.Department" /> -->
+		
+<!-- 		<mapping class="com.onetomany.Employee" /> -->
+<!-- 		<mapping class="com.onetomany.Department" /> -->
+		
+<!-- 		<mapping class="com.manytoone.Employee" /> -->
+<!-- 		<mapping class="com.manytoone.Department" /> -->
+		
+		<mapping class="com.manytomany.Student" />
+		<mapping class="com.manytomany.Course" />
 
 	</session-factory>
 

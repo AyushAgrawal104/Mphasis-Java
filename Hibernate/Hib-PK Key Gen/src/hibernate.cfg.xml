@@ -17,7 +17,7 @@
 		<property name="connection.pool_size">1</property>
 
 		<!-- SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
 
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
@@ -35,7 +35,6 @@
 		<!-- Mapping Resources -->
 		
 		<mapping class="com.Employee" />
-		<mapping class="com.Report" />
 
 	</session-factory>
 
