@@ -1,5 +1,6 @@
 package com.manytomany;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -7,6 +8,7 @@ import javax.persistence.Id;
 public class Course {
 	@Id
 	private int courseId;
+	
 	private String courseName;
 	private double price;
 
