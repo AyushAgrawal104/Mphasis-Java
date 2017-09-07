@@ -1,0 +1,9 @@
+<project name="mkdirProj" default="folderCreate">
+
+	<target name="folderCreate">
+		<mkdir dir="Employee/Dept"/>
+		<mkdir dir="Employee/Accounts"/>
+		<mkdir dir="Employee/HR"/>
+	</target>
+
+</project>

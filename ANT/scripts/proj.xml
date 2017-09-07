@@ -1,0 +1,38 @@
+<project name="buildProj" default="executeproj">
+
+<target name="clean">
+	<delete dir="build/bin"/>
+</target>
+
+
+<target name="init" depends="clean">
+	<mkdir dir="src"/>
+	<mkdir dir="build/classes"/>
+	<mkdir dir="dist/lib"/>
+	<copy todir="src">
+    	  <fileset dir="d:/jardemo"/>
+  	</copy>
+</target>
+
+<target name="compile" depends="init">
+	<javac srcdir="src"
+         destdir="build/classes"/>
+
+</target>
+
+<target name="jarfile" depends="compile">
+ 	<jar destfile="dist/lib/app.jar"
+         basedir="build/classes"/>
+</target>
+
+<target name="executeproj" depends="jarfile">
+	<java classname="com.Use">
+       
+         <classpath>
+           <pathelement location="dist/lib/app.jar"/>
+         </classpath>
+       </java>
+
+</target>
+
+</project>

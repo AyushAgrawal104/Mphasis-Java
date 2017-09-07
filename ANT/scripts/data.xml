@@ -1,0 +1,13 @@
+<project name="MyData" default="MyData">
+
+<target name="MyData">
+	<copy file="xyz.txt" tofile="praveen/xyz1.txt"/>
+</target>
+
+<target name="dirCopy">
+<copy todir="Ozvitha">
+    <fileset dir="praveen"/>
+</copy>
+</target>
+
+</project>

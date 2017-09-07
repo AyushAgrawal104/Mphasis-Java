@@ -1,0 +1,14 @@
+<project name="MyProj" default="t3">
+
+	<target name="t1">
+		<echo>My First ANT Script Code </echo>
+	</target>
+
+	<target name="t2" depends="t1">
+		<echo>Target 2 </echo>
+	</target>
+
+       <target name="t3" depends="t2">
+		<echo>Target 3 </echo>
+	</target>
+</project>

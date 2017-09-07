@@ -1,0 +1,14 @@
+<project name="del" default="deleteFolder">
+
+<target  name="deleteFile">
+	<delete file="xyz.txt"/>
+</target>
+
+<target  name="deleteFolder">
+<delete dir="xyz"/>
+<echo> Steps after deletions </echo>
+</target>
+
+
+
+</project>

@@ -20,7 +20,6 @@ public class Test {
 		SessionFactory sf = cf.buildSessionFactory(sr);
 
 		Session ses = sf.openSession();
-
 		Transaction tx = ses.beginTransaction();
 
 		Employee emp = new Employee();
