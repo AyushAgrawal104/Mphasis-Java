@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="" method="get" name="myform">
+Employee Name  <input type="text" pattern="/[A-z]+$/" value="1234" required="required"/><br>
+Gender: <input type="radio" name="gen"> Male
+		<input type="radio" name="gen"> FeMale <br/>
+
+Hobbies: <input type="checkbox" name="hobies"> Foot Ball		
+<input type="checkbox" name="hobies" checked="checked">Chess
+<input type="checkbox" name="hobies"> Volley Ball
+<input type="checkbox" name="hobies"> Cricket Ball <br/>
+Password: <input type="password">  <br/>
+Select Resume: <input type="file"><br/>
+Select Course: 
+<select name="course">
+<option>BSC</option>
+<option>MSC</option>
+<option>CSC</option>
+<option>DSC</option>
+</select>
+
+<hr/>
+
+Select Color: <input type="color"> <br/>
+<label for="colors-box">Colors:</label><br/>
+<input id="colors-box" list="colors" />
+<datalist id="colors">
+<option value="Blue" />
+<option value="Red" />
+<option value="Yellow" />
+<option value="Orange" />
+<option value="White" />
+</datalist> <br/>
+Date: <input type="date" /> <br/>
+Time: <input type="time" /> <br/>
+Date and Time: <input type="datetime" /><br/>
+Month: <input type="month" /><br/>
+Email: <input type="email" /> <br/>
+URL: <input type="url" /> <br/>
+Mobile: <input type="tel" /><br/>
+Select Range: <input type="range" /> <br/>
+Number: <input type="number" /> <br/>
+Search: <input type="search" /> <br/>
+
+<input type="submit" value="Store">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
