@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/employee"
+	xmlns:spr="http://www.example.org/employee" elementFormDefault="qualified">
+
+	<element name="employee">
+
+		<complexType>
+			<sequence>
+
+				<element name="empid" type="string" />
+				<element name="empname" type="string" />
+				<element name="salary" type="double" />
+
+			</sequence>
+
+		</complexType>
+
+
+
+	</element>
+
+
+</schema>

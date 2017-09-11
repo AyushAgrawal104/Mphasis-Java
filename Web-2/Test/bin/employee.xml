@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<employee xmlns="http://www.example.org/employee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/employee employee.xsd">
+
+	<empid>Emp001</empid>
+	<empname>Praveen</empname>
+	<salary>1024</salary>
+
+</employee>
+

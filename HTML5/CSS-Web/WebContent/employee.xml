@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE employee SYSTEM "emp.dtd"> 
+<employee>
+<ename></ename>
+<addr></addr>
+<phone></phone>
+<salary></salary>
+</employee>

@@ -1,0 +1,22 @@
+<?xml version = "1.0"  ?>
+<!DOCTYPE address [
+   <!ELEMENT address (name*,phone+,company,pin?)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT company (#PCDATA)>
+   <!ELEMENT phone (#PCDATA)>
+   <!ELEMENT pin (#PCDATA)>
+]>
+
+<address>
+	<name>Tanmay Patil</name>
+	<name>Tanmay Patil</name>
+	<name>Tanmay Patil</name>
+
+	<phone>(011) 123-4567</phone>
+	<phone>(011) 123-4567</phone>
+
+	<company>TutorialsPoint</company>
+
+	<pin>979477</pin>
+	
+</address>

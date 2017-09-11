@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/dept"
+	xmlns:mdept="http://www.example.org/dept" elementFormDefault="qualified">
+
+	<element name="deparrtment">
+		<complexType>
+			<sequence>
+				<element name="deptid" type="string" />
+				<element name="deptname" type="string" />
+
+			</sequence>
+
+		</complexType>
+
+	</element>
+
+
+</schema>

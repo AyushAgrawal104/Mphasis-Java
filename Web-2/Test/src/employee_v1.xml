@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spr:employee xmlns:spr="http://www.example.org/employee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/employee employee.xsd ">
+  
+
+  <spr:empid>empid</spr:empid>
+  <spr:empname>empname</spr:empname>
+  <spr:salary>0.0</spr:salary>
+
+
+</spr:employee>
