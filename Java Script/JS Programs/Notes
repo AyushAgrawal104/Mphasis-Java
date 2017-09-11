@@ -1,0 +1,143 @@
+
+
+
+
+ref : http://crockford.com/
+
+
+JS-lang
+
+  --> scripting lang for web-pages in browser-envi
+  +
+  --> server-side lang on Node
+  --> mobile appln
+  
+JS Features  
+
+  --> functional pgming lang
+  --> OO lang
+  --> dynamic data-types
+  --> single-threaded lang & supports concurrency
+  --> IO operations are non-blocking
+  --> best event-driven pgming lang.
+  --> have 'closure' support
+  
+where/when to use .JS lang ?
+
+ on event , to execute any func async
+ 
+ //------------------------------------------
+ 
+ JS-lang is an impln of 'ECMAScript spec'
+ 
+ latest : ECMA-2015 or ES6
+ 
+ //------------------------------------------
+ 
+ 
+ how to run .js programs ?
+ 
+ --> we need JS-runtime/engine.
+ 
+ 
+ browser envi
+ 
+  a. chrome  : v8(c++)
+  b. firefox : rhino(java)
+  c. IE      : chakra
+  d. safari  : nitro
+  
+non-brower envi
+  
+  a. Node    : v8  
+  b. JVM     : nashorn
+  c. MongoDB
+  d. Apache CouchDB
+  e. Adobe
+  
+  //----------------------------------
+  
+  
+  JS-learn
+  
+  
+  1. JS - data types
+  2. JS - execution contexts
+  3. JS - functions , OO concepts
+  4. JS - 'this' keyword
+  5. JS - closures
+  6. JS - inheritance
+  7. JS - obj-adv
+  8. JS - concurrency model
+  9. JS - ES6 New Features
+  10. JS - with HTML
+  
+  ------------------------------------
+  
+ light-weight dev-webserver : instalation steps
+  
+  
+npm config set proxy http://proxy.cognizant.com:6050
+npm congig set strict-ssl false
+
+npm i live-server -g
+
+npm get prefix ==> npm-global-path
+
+set path=%PATH%;npm-global-path;
+
+live-server --port=8181
+
+  
+//--------------------------------------------  
+  
+  
+  .js-lang is
+  
+     --> single-threaded pgming lang , but we can do better concurrency
+     --> all IO operations are non-blocking
+     
+     terms
+     
+     --> async func executions
+     --> callbacks
+     
+  
+  
+  e.g browser ( chrome )
+  
+  
+    a. JS-engine ( v8 ) basd on ECMAScript spec
+    
+        i. single call-stack ( to hold excution-context data )
+        ii. heap             ( free memory , to holds objects )
+        
+    b. browser's APIs ( DOM , XHR , Timer , etc  ) based on w3c standard
+    
+    c. event/message/callback - queue
+    
+    d. Event-Loop
+    
+    ref : http://latentflip.com/loupe/
+    
+    blog : https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+    
+    //--------------------------------
+    
+         
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+   
+  
+  
+  
+  
+  
