@@ -1,0 +1,84 @@
+JS Notes
+-----------
+ref: http://crackford.com/
+
+JS-lang
+--------
+	--> Scripting language for web-pages in browser envi +
+	--> server-side language on Node
+	--> Mobile aplications
+	
+JS Features
+-----------
+	--> Functional programming language
+	--> OO Language
+	--> Dynamic Data types
+	--> Single threaded lang & supports concurrency
+	--> IO operations are non-blocking
+	--> Best event driven programming language
+	--> Have 'closure' support
+	
+
+Where/when to use JS lang?
+------------------------------
+on event, to execute any function async
+
+//-----------------------------------------------------
+
+JS-lang is a implementationof "ECMAScript' spec   --> ES
+latest:  ECMA -2015  or ES6
+
+//------------------------------------------------------
+
+
+How  to run .js file
+--------------------------
+
+--> We need Js-Runtime/engine
+
+browser envi
+--------------
+	a. Chrome: V8
+	b. firefox: rhino (java)
+	c. IE:    chakra
+	d. safari: nitro
+	
+Non-Browser envi
+-----------------	
+	
+	a. Node	: V8
+	b. JVM  : nashorn
+	c. MongoDB
+	d. Apache Cloud
+	e. Adobe
+
+//-------------------------------	
+	
+
+JS-Lean
+---------
+1. JS-Data types
+2. JS- execution process
+3. JS-Functions, OO concepts
+4. JS-'this' keyword
+5. closures
+6. Inheritence
+7. Objects - advance level
+8. Concurrency model
+9. JS - with HTML (browser)
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
