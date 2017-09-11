@@ -7,9 +7,7 @@
 			<sequence>
 				<element name="deptid" type="string" />
 				<element name="deptname" type="string" />
-
 			</sequence>
-
 		</complexType>
 
 	</element>
