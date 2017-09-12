@@ -15,20 +15,18 @@
 
 // whey we need 'this' keyword?
 
-// var person = {
-//     pName: 'Nag',
-//     sayName: function () {
-//         //console.log('im ' + pName)
-//         //console.log('im ' + person.pName);
-//         console.log('im ' + this.pName);
-//     }
-// };
+ var person = {
+     pName: 'Praveen',
+     sayName: function () {
+             console.log('im ' + this.pName);
+     }
+ };
 
-// // person.sayName();
+person.sayName();
 
-// var p = person;
-// person = { pName: 'Ria' };
-// p.sayName();
+var p = person;
+person = { pName: 'Ria' };
+p.sayName();
 
 //-------------------------------------------------------------
 

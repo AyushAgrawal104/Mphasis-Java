@@ -23,11 +23,10 @@
 
 // way-1 : function declaration
 
-// console.log(add(12,13));
-
-// function add(n1, n2) {
-//     return n1 + n2;
-// }
+console.log(add(12,13));
+function add(n1, n2) {
+     return n1 + n2;
+ }
 
 // console.log(add(12,13));
 
@@ -35,13 +34,13 @@
 
 // way - 2 : function expression
 
-// console.log(add(12, 13));
+console.log(add(12, 13));
 
-// var add = function(n1, n2) {
-//     return n1 + n2;
-// }
+var add = function(n1, n2) {
+     return n1 + n2;
+}
 
-// console.log(add(12, 13));
+console.log(add(12, 13));
 
 
 //-------------------------------------------------------
@@ -94,19 +93,19 @@ function teach() {
     return learn;
 }
 
-// var learnFunc = teach();
-// learnFunc();
-// learnFunc();
+var learnFunc = teach();
+learnFunc();
+learnFunc();
 
 //-------------------------------------------------------
 
 
 function giveBack(a,b,c) {
     console.dir(arguments);
-    return arguments[0];
+    return arguments[3];
 }
 
-// console.log(giveBack(12,13,14,15,16));
+ console.log(giveBack(12,13,14,15,16));
 
 function sum() {
     var i = 0,
