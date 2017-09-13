@@ -1,0 +1,11 @@
+[
+	{
+		"name": "laptop",
+		"price": 2000
+	},
+
+	{
+		"name": "Mobile",
+		"price": 1000
+	}
+]

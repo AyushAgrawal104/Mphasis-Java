@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Sliding and Fading Elements in and out
+			of View</div>
+
+		<span class="badge">see console</span>
+		<hr />
+
+		<div class="jumbotron box">jQuery</div>
+
+		<button id="animate" class="btn btn-success">Animate</button>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		//
+		$(document).ready(function() {
+			
+			$('#animate').click(function() {
+				
+				//$('.box').hide(); 
+				
+				//$('.box').toggle();
+				
+				//$('.box').slideToggle('fast');
+				
+				/* var $box = $('.box');
+				if ($box.is(':visible')) {
+					$box.fadeOut('slow');
+				} else {
+					$box.fadeIn('slow');
+				}  */
+				
+				
+				//$('.box').fadeTo('slow', 'toggle');
+				
+				$('.box').animate({ opacity : 'toggle' }, 'slow');
+				
+			});
+		});
+	</script>
+
+
+</body>
+</html>

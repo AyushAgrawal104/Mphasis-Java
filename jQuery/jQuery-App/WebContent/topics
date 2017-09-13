@@ -1,0 +1,112 @@
+
+
+  1. Custom Events
+  
+  2. event.preventDefault()  , event.stopPropagation()
+  
+  //
+  
+  history of jquery events
+  
+  deprecated event methods
+  
+   . bind()  v 1.0
+   . live()
+   . delegate()
+   
+   // v 1.7
+   
+  .on()
+   
+   or 
+   
+   event short-hand methods
+   
+   click() , hover() , focus() , ......
+   
+   ----------------------------------------
+   
+   
+   AJAX with Jquery
+   
+   ----------------------------------------
+   
+   
+   traditional web appln
+   
+   
+   
+   browser                       web-server
+   
+     initial request
+   --------------------------------->
+   <---------------------------------
+   
+    click,submit
+   --------------------------------->
+   <---------------------------------
+   
+   
+   Limitations
+   
+   --> synchronous
+   --> on every new response , browser re-load current web-page
+   --> browser re-load same CSS , JS , images , layout pages again and again , increase n/w bandwidth
+   --> server need to re-construct same UI-pages again and again will small data change ( server must remember user state/session )
+   
+  
+   
+   soln 
+   
+     XMLHttpRequest API ( XHR )   --> AJAX
+     
+     
+    browser                       web-server
+   
+     initial request
+   --------------------------------->
+   <---------------------------------
+    layout-page + CSS + JS + Fonts + logos
+   
+   
+    click,submit
+   --------------------------------->
+   <---------------------------------
+     data - XML or JSON , templates
+   
+   
+   -----------------------------------------------------------------
+   
+   
+   
+   jquery-plugins
+   jquery-UI comp
+   
+   case-study
+   
+   ---------------------------------------------
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

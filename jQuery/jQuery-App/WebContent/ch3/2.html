@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Selecting Specific Siblings</div>
+
+		<div id="content">
+			<h1>Main title</h1>
+			<h2>Section title</h2>
+			<p>Some content...</p>
+			<h2>Section title</h2>
+			<p>More content...</p>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+	
+	jQuery('h1 + h2').css('border','1px solid red');
+	// Selects ALL H2 elements that are adjacent siblings of H1 elements
+	
+	//jQuery('h1').nextAll('h2').css('border','1px solid red');
+		
+	</script>
+
+
+</body>
+</html>

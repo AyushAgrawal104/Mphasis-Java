@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">JQuery -  Selecting Radio Buttons Automatically</div>
+
+		<hr/>
+		
+		<p>How did you hear about us?</p> 
+		<ul id="chooseSource">
+			<li>
+			<input name="source" id="source1" type="radio" value="www" /> <label for="source1">Website or Blog</label>
+			</li>
+			<li>
+			<input name="source" id="source2" type="radio" value="mag" /> <label for="source2">Magazine</label>
+			</li>
+			<li>
+			<input name="source" id="source3" type="radio" value="per" /> <label for="source3">Friend</label>
+			</li>
+			<li>
+			<input name="source" id="source4" type="radio" value="oth" /> <label for="source4">Other</label>
+			<input name="source4txt" id="source4txt" type="text" />
+			</li> 
+		</ul>
+	
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		
+		$(function(){
+			
+			// find any text input in chooseSource list, and listen for blur 
+			$('#chooseSource input:text').blur(function(){
+			// if text input has text 
+				if ( $(this).val() != '' ) {
+					// find the radio button sibling and set it be selected
+					$(this).siblings('input:radio').attr('checked',true); 
+				}
+			});
+			
+		});
+	</script>
+
+
+</body>
+</html>

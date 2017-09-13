@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+   
+	var b1="<button>Click Here</button>";
+	var p1="<p>This is a Para</p>";
+	var iff="<input  type='text' id='ename'>";
+	$("#d1").append(b1);
+	$("#d2").append(p1);
+	$("#d3").append(iff);
+	
+	$(".b1").on('click',function(){
+		$("p").text("Updated");
+		$("#ename").css("background-color", "red");
+	})	
+	
+});
+		
+		
+		 
+		
+		
+</script>
+
+</head>
+<body>
+	
+	<div id="d1">
+	
+	</div>
+	
+	<div id="d2">
+	
+	</div>
+	
+	<div id="d3">
+	
+	</div>
+	
+	<button class="b1">Click</button>
+	
+
+</body>
+</html>

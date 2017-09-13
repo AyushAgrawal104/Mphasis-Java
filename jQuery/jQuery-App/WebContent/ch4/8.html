@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+.even {
+	background-color: #ffffff;
+}
+
+.odd {
+	background-color: #cccccc;
+}
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">jQuery.mrge and JQuery.unique</div>
+		
+		<ul>
+			<li class="animals">horse1</li>
+			<li class="animals">horse1</li>
+			<li class="horses">horse1</li>
+		</ul>
+		
+		<hr/>
+		
+		<ol id="uniqueAnimals">
+		
+		</ol>
+		
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		
+		var animals = $('li.animals').get();
+		var horses = $('li.horses').get();
+		
+		var tmp = $.merge(animals, horses);
+		
+		tmp = $.unique(tmp);
+		
+		console.log(tmp);
+		
+		$('#uniqueAnimals').append($(tmp).clone());
+		
+	</script>
+
+
+</body>
+</html>

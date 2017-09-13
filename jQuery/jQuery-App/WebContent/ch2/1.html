@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Replacing DOM Elements</div>
+		
+		<ul>
+			<li class='remove'>name</li> 
+			<li>name</li>
+			<li class='remove'>name</li> 
+			<li class='remove'>name</li> 
+			<li>name</li>
+			<li class='remove'>name</li> 
+			<li>name</li>
+			<li class='remove'>name</li> 
+		</ul>
+		
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	
+	<script type="text/javascript">
+	//jQuery('li.remove').replaceWith('<li>removed</li>');
+	jQuery('<li>removed</li>').replaceAll('li.remove');
+	</script>
+
+
+</body>
+</html>

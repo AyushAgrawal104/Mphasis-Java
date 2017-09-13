@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">JQuery - Events</div>
+
+		<div class="jumbotron" id="myBox">
+			<!-- <button id="b1" class="btn btn-primary odd">Click Me </button>
+			<button id="b2" class="btn btn-primary even">Click Me </button>
+			<button id="b3" class="btn btn-primary odd">Click Me </button>
+			<button id="b4" class="btn btn-primary even">Click Me </button> -->
+
+		</div>
+
+		<button id="onBtn" class="btn btn-success">ON</button>
+		<button id="offBtn" class="btn btn-danger">OFF</button>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		//
+		var o = {
+			doSomeThing : function() {
+				console.log('doing something...');
+			}
+		};
+
+		//var boxEle=document.getElementById('myBox');
+		//boxEle.addEventListener('click',o.doSomeThing);
+
+		//boxEle.attachEvent();
+
+		$(document).ready(function() {
+
+			// simeple event Binding
+			/* $('div#myBox').on('click', function(event) {
+				console.log('myBox clicked....');
+			}); */
+
+			// Many events , but only one event handler
+			/* $('#myBox').on("mouseenter mouseleave click",function(event){
+				console.log('event-'+event.type);
+			}); */
+
+			// many events and handlers
+			/* $("div#myBox")
+			.on({
+				mouseenter:function(event){
+					console.log('mouse enter');
+				},
+				mouseleave:function(event){
+					console.log('mouse leav');
+				},
+				click(event){
+					console.log('mouse click');
+					console.dir(event);  // event contains all details of event..
+				}
+			}); */
+
+			// Event Delegation ( Binding events to elements that dont exist yet)
+			//-> attaching event handler to dynamically placed elements
+			/* $('#myBox').on('click','.odd',function(event){
+				console.log('odd button click handler...');
+				console.log('click event on '+event.target.id);
+			});
+			$('#myBox').on('click','.even',function(event){
+				console.log('even button click handler...');
+				console.log('click event on '+event.target.id);
+			}); */
+
+			/* setTimeout(function() {
+				$("#myBox").html('<button id="b1" class="btn btn-primary odd">Click Me </button>');
+				$("#myBox").html('<button id="b2" class="btn btn-primary even">Click Me </button>');
+				$("#myBox").html('<button id="b3" class="btn btn-primary odd">Click Me </button>');
+				$("#myBox").html('<button id="b4" class="btn btn-primary even">Click Me </button>');
+			},1000); */
+
+			//$('#muBox').one('click',handler);
+			
+			/* $('#onBtn').on('click', function() {
+				// bind event listener
+				$('#myBox').on('click', function() {
+					console.log('box click handler...');
+				});
+
+			});
+
+			$('#offBtn').on('click', function() {
+				// un-bind event listener..
+				$('#myBox').off('click');
+			}); */
+			
+			
+			// line-up
+			
+			
+			//Advanced event handling and custom events
+			// Promise and Deferred API
+			// jquery with server-side communication
+			// Jquery Plugins
+			
+			
+			
+
+		});
+	</script>
+
+
+</body>
+</html>

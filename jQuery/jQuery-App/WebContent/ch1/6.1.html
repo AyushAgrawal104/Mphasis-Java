@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header"> Including the Previous Selection with the Current Selection </div>
+		
+		
+		<div>
+			<p>Paragraph</p>
+			<p>Paragraph</p>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		
+	jQuery('div').find('p').andSelf().css('border','1px solid #993300');
+	
+	</script>
+
+
+</body>
+</html>

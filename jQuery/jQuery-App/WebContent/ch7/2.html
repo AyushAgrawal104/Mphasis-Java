@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+.box {
+	position: relative;
+}
+
+#revealUp {
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	bottom: 0;
+	background-color: #c00;
+	height: 0;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="page-header">Sliding and Fading Elements in and out
+			of View</div>
+
+		<span class="badge">see console</span>
+		<hr />
+
+		<div class="box">
+			<div id="revealUp">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+
+		<button id="animate" class="btn btn-success">Animate</button>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+	//
+	$(document).ready(function() {
+		$('#animate').click(function() {
+			var $box = $('#revealUp');
+			if ($box.height() > 0) {
+				$box.animate({
+					height : 0
+				});
+			} else {
+				$box.animate({
+					height : '100%'
+				});
+			}
+		});
+	});
+	</script>
+
+
+</body>
+</html>

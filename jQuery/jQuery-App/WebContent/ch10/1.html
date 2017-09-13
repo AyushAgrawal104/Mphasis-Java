@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">JQuery - AJAX</div>
+
+		<div class="jumbotron" id="myBox">
+		
+		</div>
+
+		<button id="btn" class="btn btn-primary">AJAX - Request</button>
+		
+		<hr/>
+		
+		<div class="col-md-5">
+		<form name="productForm" id="productForm">
+			<div class="form-group">
+				<label>Name:</label>
+				<input name="name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Price:</label>
+				<input name="price" class="form-control">
+			</div>
+			<button type="submit"  class="btn btn-primary">Save</button>
+		</form>
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			
+			
+			$("#productForm").submit(function(event){
+				
+				event.preventDefault();
+				
+				// read form-data
+				
+				var formData=$(this).serialize();
+				//var formData=$(this).serializeArray();
+				console.log(formData);
+				
+				$.post('save.htm',{
+					data:formData
+				});
+				
+			});
+
+			$("#btn").click(function() {
+
+				//var url='info.txt';
+				//var url="products.xml";
+				//var url = "products.json";
+
+				/* jQuery.ajax(url, {
+					dataType:'json',  // text | xml | json | script | jsonp
+					data:{type:'elec'},
+					method:'GET',
+					cache:false,
+					beforeSend:function(){
+						// start overlay  , GIF , pleas wait...
+					},
+					success : function(data,status) {
+						console.log(data);
+					},
+					error:function(xhr,status,errorThrows){
+						
+					},
+					complete:function(xhr,status){
+						
+					}
+				}); */
+
+				/* var response;
+				
+				jQuery.ajax({
+					url:url,
+					async:true,
+					success:function(result){
+						response=result;
+						console.log(response);
+					}	
+				}); */
+
+				// Limitation on XHR API 
+				// Cross Domain AJAX not possible with XHR API
+				/* jQuery.ajax({
+					url:'http://www.google.com/search=jquery'
+				}); */
+
+				//soln : use ' JSONP approch'
+				/* jQuery.ajax({
+					url:'http://www.jquery4u.com/scripts/jquery4u-sites.json',
+					dataType:'jsonp',
+					success:function(data){
+						console.log(data);
+					},
+					error:function(xhr,startus,errorThrown){
+						console.log(errorThrown);
+					}
+				}); */
+
+				//jQuery.ajax({url:'demo.js',dataType:'script'});
+				
+				
+				//-------------------------------------------------
+				
+				//$("#myBox").load('some-template.html');
+				
+				//-------------------------------------------------
+				
+				
+				$(document).ajaxStart(function(){
+					console.log('AJAX requeest started....');
+				});
+
+			});
+
+		});
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+
+ Level-1
+ 
+1. Selecting DOM Elements Using Selectors and the jQuery Function
+2. Selecting DOM Elements Within a Specified Context
+3. Filtering a Wrapper-Set(jq colln ) of DOM Elements
+4. Finding Descendant Elements Within the Currently Selected Wrapper Set
+5. Returning to the Prior Selection Before a Destructive Change
+6. Returning to the Prior Selection Before a Destructive Change
+7. Including the Previous Selection with the Current Selection
+8. Traversing the DOM Based on Your Current Context to Acquire a New Set of DOM Elements
+9. Creating, Operating on, and Inserting DOM Elements
+10. Removing DOM Elements
+11. Replacing DOM Elements
+12. Cloning DOM Elements
+13. Getting, Setting, and Removing DOM Element Attributes
+14. Getting and Setting Text/HTMl/value on HTML elements
+
+Level-2
+
+1. Looping Through a Set of Selected Results
+2. Reducing the Selection Set to a Specified Item
+3. Convert a Selected jQuery Object into a Raw DOM Object
+4. Getting the Index of an Item in a Selection
+5. Making a Unique Array of Values from an Existing Array
+6. Performing an Action on a Subset of the Selected Set
+
+
+--------------------------------------------------
+
+
+jQuery Utilities
+
+
+1. Detecting Features with jQuery.support
+2. Iterating Over Arrays and Objects with jQuery.each
+3. Filtering Arrays with jQuery.grep
+4. Iterating and Modifying Array Entries with jQuery.map
+5. Combining Two Arrays with jQuery.merge
+6. Filtering Out Duplicate Array Entries with jQuery.unique
+7. Testing Callback Functions with jQuery.isFunction
+8. Removing Whitespace from Strings or Form Values with jQuery.trim
+9. Attaching Objects and Data to DOM with jQuery.data
+10. Extending Objects with jQuery.extend
+
+
+------------------------------------------------------
+
+
+Faster, Simpler, More Fun
+
+
+1. That’s Not jQuery, It’s JavaScript!
+2. What’s Wrong with $(this)?
+3. Removing Redundant Repetition
+4. Formatting Your jQuery Chains
+
+
+5. Caching Your jQuery Objects
+
+--------------------------------------------------------
+
+day-1 - JS funda
+day-2 - JS with HTML pages _ Juery inro
+day-3 - Jquery selectors
+
+
+---------------------------------------------------------
+
+day-4  : Jquery functions/actions 
+
+day-5 : Jquery plugins
+
+day-6 : small case study
+
+-----------------------------------------------------
+
+
+
+  syntax to use jQuery
+  
+  $(selector)
+  .action1()
+  .action2();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

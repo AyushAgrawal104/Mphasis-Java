@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+.even {
+	background-color: #ffffff;
+}
+
+.odd {
+	background-color: #cccccc;
+}
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Testing Callback Functions with
+			jQuery.isFunction</div>
+		
+		<div class="page-header">Removing Whitespace from Strings or Form Values with jQuery.trim</div>
+
+
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		var plugin = {
+			f : function(callback) {
+				if ($.isFunction(callback)) {
+					callback();
+				}
+			}
+		};
+
+		//-------------------
+
+		//plugin.f(function(){console.log('doing something...')});
+		plugin.f(123);
+		
+		//--------------------------------------
+		
+		
+		console.log($.trim('    Nag   '));
+		
+		
+	</script>
+
+
+</body>
+</html>

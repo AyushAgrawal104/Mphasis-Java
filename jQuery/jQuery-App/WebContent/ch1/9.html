@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Removing DOM Elements </div>
+		
+		<h3>Anchors</h3>
+		<a href='#'>Anchor Element</a>
+		<a href='#'>Anchor Element</a>
+		<a href='#' class="remove">Anchor Element</a>
+		
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	
+	<script type="text/javascript">
+	//jQuery('a').remove();
+	jQuery('a').remove('.remove');
+	</script>
+
+
+</body>
+</html>

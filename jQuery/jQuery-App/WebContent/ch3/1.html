@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Selecting Child Elements Only</div>
+
+		<a href="/category">Category</a> 
+		
+		<ul id="nav">
+			<li><a href="#anchor1">Anchor 1</a></li>
+			<li><a href="#anchor2">Anchor 2</a></li>
+			<li><span><a href="#anchor3">Anchor 3</a></span></li>
+		</ul>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+	
+	//jQuery('#nav li > a').css('border','1px solid red');
+	// This selects two elements, as expected
+	
+	jQuery('li > a', '#nav').css('border','1px solid red');
+	
+	
+	
+	</script>
+
+
+</body>
+</html>

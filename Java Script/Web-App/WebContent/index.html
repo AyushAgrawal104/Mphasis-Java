@@ -50,6 +50,17 @@ img:hover {
 		}
 		return true;
 	}
+	
+	function test3(){
+		var s1=document.getElementById("ha").value;
+		document.getElementById("oa").innerHTML=s1;
+		
+	}
+	
+	function mystyles(){
+		document.getElementById("salary").style.width="100%";
+		//document.getElementById("salary").style.border-radius="10px";
+	}
 </script>
 
 
@@ -75,8 +86,24 @@ img:hover {
 
 				<tr>
 					<td>Salary</td>
-					<td><input type="text" name="salary" id="salary" />
+					<td><input type="text" name="salary" id="salary" onfocus="javascript:mystyles()"/>
 					<td><span id="sp2"></span></td>
+				</tr>
+				
+				<tr>
+					<td>Home Address</td>
+					<td><textarea name="ha" id="ha" ></textarea>
+					<td><span id="sp3"></span></td>
+				</tr>
+				
+				<tr>
+					<td>Same</td>
+					<td><input type="checkbox" name="addr" id="addr"> </td>
+				</tr>
+				<tr>
+					<td>Office Address</td>
+					<td><textarea name="oa" id="oa"></textarea>
+					<td><span id="sp4"></span></td>
 				</tr>
 
 				<tr>

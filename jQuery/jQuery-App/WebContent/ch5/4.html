@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<style type="text/css">
+</style>
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Writing Faster Selectors</div>
+
+		<span class="badge">see console</span>
+		<hr />
+
+		<div class="foo"></div>
+		<div id="bar"></div>
+		
+		
+
+		<table id="log">
+			<tr>
+				<td>Client X:</td>
+				<td class="clientX"></td>
+			</tr>
+		</table>
+
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+		
+		$('.foo') // Slower 
+		$('#bar') // Faster
+		
+		$('.clientX') // slower
+		$('td.clientX') // may be faster
+		$('#log .clientX') // may be much faster
+		$('.clientX',$('#log')) // may be much faster
+		$('#log td.clientX') // Possibly faster in some browsers
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Getting, Setting, and Removing DOM Element Attributes</div>
+
+		<a>jquery.com</a>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+
+	<script type="text/javascript">
+			
+			// attr('name')  --> get
+			// attr('name','value')  --> set
+			
+			// removeAttr('name');
+			
+	
+			jQuery('a')
+			.attr({'href':'http://www.jquery.com',target:'_blank'});
+			
+			alert(jQuery('a').attr('href'));
+			
+			setTimeout(function() {
+				jQuery('a').removeAttr('href');
+			}, 3000);
+			
+	</script>
+
+
+</body>
+</html>

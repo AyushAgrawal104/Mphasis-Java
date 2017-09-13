@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header"> Finding Descendant Elements Within the Currently Selected Wrapper Set </div>
+		
+		
+		<p class="myPara">Ut ad videntur facilisis <em>elit</em> cum. Nibh insitam erat facit <em>saepius</em> magna. Nam ex liber iriure et imperdiet. Et mirum eros iis te habent. </p>
+		<p>Claram claritatem eu amet dignissim magna. Dignissim quam elit facer eros illum. Et qui ex esse <em>tincidunt</em> anteposuerit. Nulla nam odio ii vulputate feugait.</p>
+		<p>In quis <em>laoreet</em> te legunt euismod. Claritatem <em>consuetudium</em> wisi sit velit facilisi.</p>
+				
+
+
+		<ul>
+			<li><a class="list" href="#">Link-1</a></li>
+			<li><a class="list" href="#">Link-2</a></li>
+		</ul>
+		
+		<p><a href="#">Link-3</a></p>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		
+	//alerts total italic words found inside of <p> elements 
+	//alert('The three paragraphs in all contain ' + jQuery('p').find('em').length + 'italic words');
+	
+	//alert('The three paragraphs in all contain ' + jQuery('em',$('p')).length + ' italic words');
+	
+	//alert('The three paragraphs in all contain ' + jQuery('p em').length + ' italic words');
+	
+	
+	// imp difference   find vs filter
+	
+	// find() returns children elements, 
+	// while filter() only filters what is in the current wrapper set
+	
+	//console.log($('a').filter('.list').length);
+	//console.log($('p').find('a').length);
+	
+	// [.my,.your,.my].flilter('.my')  --> 2 my elements
+	// [.my,.your,.my].find('.child')
+	
+	
+	</script>
+
+
+</body>
+</html>

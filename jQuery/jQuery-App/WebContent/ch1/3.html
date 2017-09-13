@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header"> Filtering a Wrapper Set of DOM Elements</div>
+		
+		
+		<a href="#" class="external">link</a>
+		<a href="#" class="external">link</a>
+		<a href="#"></a>
+		<a href="#" class="external">link</a>
+		<a href="#" class="external">link</a>
+		<a href="#"></a>
+		<a href="#">link</a>
+		<a href="#">link</a>
+		<a href="#">link</a>
+		<a href="#">link</a>
+		
+
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		
+	//alerts 4 left in the set 
+	//alert(jQuery('a').filter('.external').length + ' external links');
+	
+	alert( jQuery('a')
+			.filter(function(index){ return $(this).hasClass('external');})
+			.length + ' external links' );
+	
+	</script>
+
+
+</body>
+</html>

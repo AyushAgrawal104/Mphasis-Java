@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header"> Returning to the Prior Selection Before a Destructive Change</div>
+		
+		
+		<p>text</p>
+		<p class="middle">Middle <span>text</span></p>
+		<p>text</p>
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		
+	//alert(jQuery('p').filter('.middle').length); //alerts 1
+    jQuery('p')
+		.filter('.middle').
+		css('border','1px solid red')
+	.end()
+	.css('font-size','20px'); //alerts 3
+	
+	alert(jQuery('p').filter('.middle').find('span').end().end().length); //alerts 3		
+	
+	</script>
+
+
+</body>
+</html>

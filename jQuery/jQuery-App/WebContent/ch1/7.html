@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header"> 
+		 Traversing the DOM Based on Your Current Context to Acquire a New Set of DOM Elements 
+		</div>
+		
+		
+		<div> 
+			<ul> 
+				<li><a href="#">link</a></li>
+				<li><a href="#">link</a></li>
+				<li><a href="#">link</a></li>
+				<li><a href="#">link</a></li>
+			</ul> 
+		</div>
+
+
+ 
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		
+	//selects the second element in the set of <li>'s by index, index starts at 0
+	//jQuery('li:eq(0)').css({border:'1px solid red'});
+	
+	//jQuery('li:eq(1)').next().css({border:'1px solid red'}) //selects the third <li>
+	//jQuery('li:eq(1)').prev() //selects the first <li>
+	//jQuery('li:eq(1)').parent().css({border:'1px solid red'}) //selects the <ul>
+	//jQuery('li:eq(1)').parent().children().css({border:'1px solid red'}) //selects all <li>s 
+	//jQuery('li:eq(1)').nextAll().css({border:'1px solid red'}) //selects all the <li>s after the second <li> 
+	//jQuery('li:eq(1)').prevAll().css({border:'1px solid red'}) //selects all the <li>s before the second <li>
+	
+	//jQuery('li:eq(1)').parent().children(':last').css({border:'1px solid red'}) //selects the last <li>
+	
+	</script>
+
+
+</body>
+</html>

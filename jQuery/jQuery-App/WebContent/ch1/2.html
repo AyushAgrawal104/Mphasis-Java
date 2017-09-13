@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body bgcolor="yellow">
+
+	<div class="container">
+
+		<div class="page-header">Selecting DOM Elements Within a Specified Context</div>
+
+		<form>
+			<input name="" type="checkbox" /> 
+			<input name="" type="radio" /> 
+			<input name="" type="text" />
+			<input name="" type="button" />
+		</form>
+		
+		<form>
+			<input name="" type="checkbox" />
+			<input name="" type="radio" />
+		    <input name="" type="text" />
+			<input name="" type="button" />
+		</form>
+		
+		<input name="" type="checkbox" />
+		<input name="" type="radio" />
+		<input name="" type="text" />
+		<input name="" type="button" />
+
+
+	</div>
+
+	<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+	
+	//alert($('input',document.body).length);
+		
+	//searches within all form elements, using a wrapper for context, alerts "8 inputs" 
+	//alert('selected ' + jQuery('input',$('form')).length + ' inputs');
+	
+	//"4 inputs"
+	//alert('selected' + jQuery('input',document.forms[0]).length+ ' inputs');
+	
+	//search within the body element for all input elements using an expression, //alerts "8 inputs"
+	//alert('selected' + jQuery('input','form').length + ' inputs');
+	
+	</script>
+
+
+</body>
+</html>
