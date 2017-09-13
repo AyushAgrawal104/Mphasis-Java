@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./jquery-3.2.1.min.js"></script>
+        <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+   
+        <script>
+
+        $(document).ready(function(){
+
+            $("#filters").on('click','.btn-primary,.btn-danger',function(){
+                $("h1").text("Updated");
+                 $("#head1").load("abc.txt");   
+            })
+
+             $("#abc").on('click','.btn-primary',function(){
+                $("h1").text("Praveen");
+            })
+
+
+
+        });
+
+        </script>
+
+    </head>
+    <body class="container">
+    
+
+    <div class="well">
+    <h1 id="head1">Hello</h1>
+    </div>
+    </body>
+
+    <div  id="filters" class="well">
+        <button class="btn btn-primary">Click Me</button>
+        <button class="btn btn-danger">Click Me</button>
+    </div>
+
+     <div id="abc" class="well">
+        <button class="btn btn-primary">Click Me</button>
+        <button class="btn btn-danger">Click Me</button>
+    </div>
+
+</html>
