@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Web-App1" path="/Web-App1" reloadable="true" source="org.eclipse.jst.jee.server:Web-App1"/><Context docBase="Web-App2" path="/Web-App2" reloadable="true" source="org.eclipse.jst.jee.server:Web-App2"/><Context docBase="Web-App3" path="/Web-App3" reloadable="true" source="org.eclipse.jst.jee.server:Web-App3"/><Context docBase="Web-App4" path="/Web-App4" reloadable="true" source="org.eclipse.jst.jee.server:Web-App4"/><Context docBase="Web-App5" path="/Web-App5" reloadable="true" source="org.eclipse.jst.jee.server:Web-App5"/></Host>
+      <Context docBase="Web-App1" path="/Web-App1" reloadable="true" source="org.eclipse.jst.jee.server:Web-App1"/><Context docBase="Web-App2" path="/Web-App2" reloadable="true" source="org.eclipse.jst.jee.server:Web-App2"/><Context docBase="Web-App3" path="/Web-App3" reloadable="true" source="org.eclipse.jst.jee.server:Web-App3"/><Context docBase="Web-App4" path="/Web-App4" reloadable="true" source="org.eclipse.jst.jee.server:Web-App4"/><Context docBase="Web-App5" path="/Web-App5" reloadable="true" source="org.eclipse.jst.jee.server:Web-App5"/><Context docBase="Web-App6" path="/Web-App6" reloadable="true" source="org.eclipse.jst.jee.server:Web-App6"/><Context docBase="Login-App" path="/Login-App" reloadable="true" source="org.eclipse.jst.jee.server:Login-App"/></Host>
     </Engine>
   </Service>
 </Server>
